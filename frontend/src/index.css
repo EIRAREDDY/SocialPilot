@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Core palette */
+  --bg-base:        #080b14;
+  --bg-surface:     #0d1117;
+  --bg-elevated:    #111827;
+  --bg-card:        #131c2e;
+  --bg-card-hover:  #172035;
+
+  /* Borders */
+  --border:         rgba(139,92,246,0.15);
+  --border-bright:  rgba(139,92,246,0.35);
+  --border-subtle:  rgba(255,255,255,0.06);
+
+  /* Brand */
+  --violet:         #7c3aed;
+  --violet-light:   #8b5cf6;
+  --violet-bright:  #a78bfa;
+  --violet-glow:    rgba(124,58,237,0.25);
+  --electric:       #6366f1;
+  --electric-light: #818cf8;
+  --blue-accent:    #3b82f6;
+
+  /* Text */
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #475569;
+  --text-dim:       #334155;
+
+  /* Status */
+  --green:          #10b981;
+  --green-bg:       rgba(16,185,129,0.12);
+  --red:            #ef4444;
+  --red-bg:         rgba(239,68,68,0.12);
+  --amber:          #f59e0b;
+  --amber-bg:       rgba(245,158,11,0.12);
+
+  /* Gradients */
+  --grad-brand:     linear-gradient(135deg, #7c3aed 0%, #6366f1 50%, #3b82f6 100%);
+  --grad-card:      linear-gradient(135deg, rgba(124,58,237,0.08) 0%, rgba(99,102,241,0.04) 100%);
+  --grad-glow:      radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.18) 0%, transparent 70%);
+
+  /* Shadows */
+  --shadow-sm:      0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md:      0 4px 16px rgba(0,0,0,0.5);
+  --shadow-lg:      0 8px 32px rgba(0,0,0,0.6);
+  --shadow-glow:    0 0 24px rgba(124,58,237,0.3);
+  --shadow-glow-sm: 0 0 12px rgba(124,58,237,0.2);
+
+  /* Radius */
+  --r-sm:  6px;
+  --r-md:  10px;
+  --r-lg:  14px;
+  --r-xl:  20px;
+  --r-2xl: 28px;
+
+  /* Transitions */
+  --t-fast:   0.15s ease;
+  --t-normal: 0.25s ease;
+  --t-slow:   0.4s ease;
+
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  min-height: 100vh;
+  min-width: 320px;
+  line-height: 1.6;
+}
+
+button { cursor: pointer; font-family: inherit; }
+a { text-decoration: none; color: inherit; }
+input, textarea, select { font-family: inherit; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--violet-light); }
+
+/* Selection */
+::selection { background: rgba(124,58,237,0.3); color: var(--text-primary); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav-links-desktop { display: none !important; }
+  .mobile-menu-btn { display: grid !important; }
+}
